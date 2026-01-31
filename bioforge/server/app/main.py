@@ -1,3 +1,4 @@
+from bioforge.server.app.api.v1 import design
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -20,6 +21,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Include the router
+app.include_router(design.router, prefix="/api/v1/design", tags=["design"])
 
 @app.get("/")
 def read_root():
