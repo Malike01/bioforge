@@ -23,3 +23,7 @@ export interface BioNodeData {
   component: BioComponent;
   isValid: boolean;
 }
+
+export type IDesignerToolbarProps = {
+  reactFlowInstance: any;
+};
