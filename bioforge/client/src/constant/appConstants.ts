@@ -144,3 +144,32 @@ export const MODULE_LIMS = {
     TIME: "min",
   },
 };
+
+// --- Content Strategy ---
+export const APP_CONTENT = {
+  global: {
+    APP_NAME: "BioForge",
+    SYSTEM_STATUS: "System Operational",
+  },
+  loader: {
+    TITLE: "BioForge System",
+    SUBTITLE: "Initializing Biological Engine...",
+    ALT_TEXT: "Loading application components",
+  },
+  errors: {
+    notFound: {
+      TITLE: "404",
+      SUBTITLE: "Genetic Sequence Not Found",
+      DESCRIPTION:
+        "The biological component you are looking for seems to have mutated or does not exist in our database.",
+      HINT_CODE: "ERR_CODE: SEQUENCE_DELETION_DETECTED",
+      BTN_HOME: "Return to Lab",
+      BTN_BACK: "Go Back",
+    },
+    generic: {
+      TITLE: "System Error",
+      DESCRIPTION: "An unexpected error occurred in the lab.",
+      BTN_RETRY: "Retry Protocol",
+    },
+  },
+};
