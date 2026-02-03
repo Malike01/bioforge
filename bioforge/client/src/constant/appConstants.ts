@@ -172,4 +172,54 @@ export const APP_CONTENT = {
       BTN_RETRY: "Retry Protocol",
     },
   },
+
+  landing: {
+    hero: {
+      BADGE: "New: AI-Powered Sequence Validation",
+      TITLE_PREFIX: "Engineering Biology,",
+      TITLE_SUFFIX: "Democratized.",
+      DESCRIPTION:
+        "BioForge is the first cloud-native CAD tool designed for the modern synthetic biologist. Design, simulate, and validate genetic circuits with the speed of software development.",
+      BTN_PRIMARY: "Start Designing Free",
+      BTN_SECONDARY: "View Documentation",
+    },
+    features: {
+      title: "Built for the Wet Lab, Designed for the Cloud",
+      list: [
+        {
+          title: "Drag & Drop Design",
+          desc: "Intuitive canvas interface with SBOL standard compliance.",
+          icon: "Layout",
+        },
+        {
+          title: "Real-time Logic Validation",
+          desc: "Catch biological syntax errors before ordering DNA synthesis.",
+          icon: "Activity",
+        },
+        {
+          title: "Team Collaboration",
+          desc: "Share designs and simulations with your lab members instantly.",
+          icon: "Users",
+        },
+      ],
+    },
+    stats: [
+      { value: "10k+", label: "Genetic Parts" },
+      { value: "0ms", label: "Latency" },
+      { value: "100%", label: "SBOL Compliant" },
+    ],
+    cta: {
+      title: "Ready to engineer life?",
+      desc: "Join thousands of researchers building the future of biotech.",
+      btn: "Launch BioForge Console",
+    },
+    footer: {
+      copyright: "© 2024 BioForge Inc. All rights reserved.",
+      links: [
+        { label: "Privacy Policy", href: "#" },
+        { label: "Terms of Service", href: "#" },
+        { label: "Contact Support", href: "#" },
+      ],
+    },
+  },
 };
