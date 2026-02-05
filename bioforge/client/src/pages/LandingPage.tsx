@@ -10,6 +10,7 @@ import {
   PlayCircle,
 } from "lucide-react";
 import { APP_CONTENT } from "@/constant/appConstants";
+import { PATHS } from "@/router/paths";
 
 export default function LandingPage() {
   const navigate = useNavigate();
@@ -37,7 +38,7 @@ export default function LandingPage() {
             </Button>
             <Button
               size="sm"
-              onClick={() => navigate("")} // navigate to PATHS.design
+              onClick={() => navigate(PATHS.design)}
               className="bg-slate-900 text-white hover:bg-slate-800"
             >
               Get Started
@@ -76,7 +77,7 @@ export default function LandingPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button
               size="lg"
-              onClick={() => navigate("")} // navigate to PATHS.design
+              onClick={() => navigate(PATHS.design)}
               className="h-12 px-8 text-lg bg-indigo-600 hover:bg-indigo-700 shadow-lg shadow-indigo-200 rounded-full transition-transform hover:scale-105"
             >
               {CONTENT.hero.BTN_PRIMARY}
@@ -189,7 +190,7 @@ export default function LandingPage() {
               </p>
               <Button
                 size="lg"
-                onClick={() => navigate("")} // navigate to PATHS.design
+                onClick={() => navigate(PATHS.design)}
                 className="bg-white text-slate-900 hover:bg-slate-100 px-8 h-14 rounded-full text-lg font-semibold"
               >
                 {CONTENT.cta.btn}

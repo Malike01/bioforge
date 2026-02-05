@@ -151,6 +151,15 @@ export const APP_CONTENT = {
     APP_NAME: "BioForge",
     SYSTEM_STATUS: "System Operational",
   },
+  menu: {
+    dashboard: "Overview",
+    design: "Bio-CAD Designer",
+    simulation: "Simulation Engine",
+    lims: "Lab Management",
+    settings: "Settings",
+    help: "Documentation",
+    userProfile: "Dr. Sen",
+  },
   loader: {
     TITLE: "BioForge System",
     SUBTITLE: "Initializing Biological Engine...",
