@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Ban, Microscope } from "lucide-react";
 import { APP_CONTENT } from "@/constant/appConstants";
+import { PATHS } from "@/router/paths";
 
 export default function NotFoundPage() {
   const navigate = useNavigate();
@@ -45,7 +46,7 @@ export default function NotFoundPage() {
           <Button
             variant="default"
             size="lg"
-            onClick={() => navigate("")} // Navigate to PATHS.root
+            onClick={() => navigate(PATHS.root)}
             className="bg-indigo-600 hover:bg-indigo-700 shadow-lg shadow-indigo-200"
           >
             {CONTENT.BTN_HOME}
