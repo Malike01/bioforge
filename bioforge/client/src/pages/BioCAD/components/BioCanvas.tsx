@@ -1,6 +1,6 @@
 import ReactFlow, { Controls, Background } from "reactflow";
 import "reactflow/dist/style.css";
-import { useDesignerStore } from "@/stores/designerStore";
+import { useDesignerStore } from "@/store/designerStore";
 import BioNode from "./BioNode";
 import { useMemo } from "react";
 

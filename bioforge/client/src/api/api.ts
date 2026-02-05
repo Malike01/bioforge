@@ -4,6 +4,8 @@ import axios, {
   type InternalAxiosRequestConfig,
 } from "axios";
 
+import { useAuthStore } from "@/store/authStore";
+
 export interface ApiErrorResponse {
   status: number;
   code: string; // 'BIO_VALIDATION_ERROR', 'AUTH_ERROR'
@@ -38,6 +40,11 @@ export const apiClient = axios.create({
 
 apiClient.interceptors.request.use(
   (config: InternalAxiosRequestConfig) => {
+    const token = useAuthStore.getState().token;
+
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
     return config;
   },
   (error) => Promise.reject(error),
@@ -48,34 +55,13 @@ apiClient.interceptors.response.use(
     return response;
   },
   (error: AxiosError<any>) => {
-    let errorResponse: ApiErrorResponse = {
-      status: 500,
-      code: "UNKNOWN_ERROR",
-      message: "An unexpected error occurred in BioForge system.",
-    };
+    const message =
+      error.response?.data?.detail || error.message || "Something went wrong";
 
-    if (error.response) {
-      const { data, status } = error.response;
-
-      errorResponse = {
-        status: status,
-        code: data?.code || `HTTP_${status}`,
-        message: data?.detail || data?.message || error.message,
-        details: data?.details || null,
-      };
-
-      if (status === 401) {
-        console.warn("Session expired");
-      }
-    } else if (error.request) {
-      errorResponse = {
-        status: 0,
-        code: "NETWORK_ERROR",
-        message:
-          "Bio-Engine is unreachable. Please check your connection or Docker containers.",
-      };
+    if (error.response?.status === 401) {
+      useAuthStore.getState().logout();
     }
 
-    return Promise.reject(new BioServiceError(errorResponse));
+    return Promise.reject(new Error(message));
   },
 );
