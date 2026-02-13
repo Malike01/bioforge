@@ -3,13 +3,17 @@ import { useAuthStore } from "@/store/authStore";
 import { PATHS } from "./paths";
 
 export const AuthGuard = () => {
-  const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
+  const { isAuthenticated, user } = useAuthStore((state) => state);
   const location = useLocation();
 
   if (!isAuthenticated) {
     return (
       <Navigate to={PATHS.auth.login} state={{ from: location }} replace />
     );
+  }
+
+  if (!user?.isAdmin) {
+    return <Navigate to={PATHS.design} replace />;
   }
 
   return <Outlet />;
