@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { CORE_THEME, MODULE_DESIGNER } from "@/constant/appConstants";
 import { useValidateDesign } from "@/hooks/useBioQueries";
-import { useDesignerStore } from "@/stores/designerStore";
+import { useDesignerStore } from "@/store/designerStore";
 import type { IDesignerToolbarProps } from "@/types/bio";
 import { prepareDesignForBackend } from "@/utils/adapter";
 import { Play, Activity, Save, Loader2, Maximize } from "lucide-react";

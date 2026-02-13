@@ -160,6 +160,22 @@ export const APP_CONTENT = {
     help: "Documentation",
     userProfile: "Dr. Sen",
   },
+  auth: {
+    login: {
+      TITLE: "Welcome to BioForge",
+      SUBTITLE: "Sign in to access your laboratory",
+      INPUT_EMAIL: "Email",
+      PLACEHOLDER_EMAIL: "researcher@bioforge.com",
+      INPUT_PASSWORD: "Password",
+      FORGOT_PASS: "Forgot?",
+      BTN_LOGIN: "Access Lab",
+      BTN_LOADING: "Authenticating...",
+      FOOTER_TEXT: "Don't have an account?",
+      FOOTER_LINK: "Request Access",
+      TOAST_SUCCESS: "Welcome back",
+      TOAST_ERROR: "Access Denied",
+    },
+  },
   loader: {
     TITLE: "BioForge System",
     SUBTITLE: "Initializing Biological Engine...",

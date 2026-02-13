@@ -1,5 +1,5 @@
 import type { BioServiceError } from "@api/api";
-import { bioApi } from "@api/BioClient";
+import { bioApi } from "@api/bioClient";
 import { useQuery, useMutation } from "@tanstack/react-query";
 import { toast } from "sonner";
 
