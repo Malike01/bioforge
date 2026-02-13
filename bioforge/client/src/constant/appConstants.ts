@@ -197,7 +197,6 @@ export const APP_CONTENT = {
       BTN_RETRY: "Retry Protocol",
     },
   },
-
   landing: {
     hero: {
       BADGE: "New: AI-Powered Sequence Validation",
@@ -246,5 +245,18 @@ export const APP_CONTENT = {
         { label: "Contact Support", href: "#" },
       ],
     },
+  },
+  invite: {
+    TRIGGER_BTN: "Invite Team",
+    MODAL_TITLE: "Invite Team Member",
+    MODAL_DESC: "Send an invitation link to collaborate on BioForge.",
+    LABEL_EMAIL: "Email Address",
+    PLACEHOLDER_EMAIL: "colleague@university.edu",
+    BTN_CANCEL: "Cancel",
+    BTN_SEND: "Send Invite",
+    BTN_SENDING: "Sending...",
+    TOAST_SUCCESS_TITLE: "Invitation Sent",
+    TOAST_SUCCESS_DESC: "Invited successfully: ",
+    TOAST_ERROR: "Failed to send invite",
   },
 };
