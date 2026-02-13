@@ -259,4 +259,30 @@ export const APP_CONTENT = {
     TOAST_SUCCESS_DESC: "Invited successfully: ",
     TOAST_ERROR: "Failed to send invite",
   },
+  admin: {
+    users: {
+      PAGE_TITLE: "User Management",
+      PAGE_SUBTITLE: "Manage team members and permissions.",
+      ERROR_LOAD: "Failed to load users.",
+      CONFIRM_DELETE:
+        "Are you sure you want to delete this user? This action cannot be undone.",
+      TOAST_DELETE_SUCCESS: "User deleted successfully",
+      TOAST_DELETE_ERROR: "Failed to delete user",
+    },
+    table: {
+      HEADER_USER: "User",
+      HEADER_ROLE: "Role",
+      HEADER_STATUS: "Status",
+      ROLE_ADMIN: "Admin",
+      ROLE_USER: "User",
+      STATUS_ACTIVE: "Active",
+      STATUS_INACTIVE: "Inactive",
+      FALLBACK_NAME: "Unknown",
+      LABEL_ACTIONS: "Actions",
+      ACTION_DELETE: "Delete User",
+      EMPTY_STATE: "No results found.",
+      BTN_PREV: "Previous",
+      BTN_NEXT: "Next",
+    },
+  },
 };
