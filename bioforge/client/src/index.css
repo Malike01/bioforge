@@ -1,3 +1,6 @@
+/* Import feature-specific styles */
+@import "./styles/neon-borders.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
