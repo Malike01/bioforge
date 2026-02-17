@@ -1,0 +1,31 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="32" height="32" rx="6" fill="url(#gradient)" />
+  
+  <!-- DNA Helix -->
+  <g stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round">
+    <!-- Left spiral -->
+    <path d="M 10 8 Q 12 10, 10 12 Q 8 14, 10 16 Q 12 18, 10 20 Q 8 22, 10 24" />
+    <!-- Right spiral -->
+    <path d="M 22 8 Q 20 10, 22 12 Q 24 14, 22 16 Q 20 18, 22 20 Q 24 22, 22 24" />
+    <!-- Connections -->
+    <line x1="10" y1="8" x2="22" y2="8" />
+    <line x1="10" y1="12" x2="22" y2="12" />
+    <line x1="10" y1="16" x2="22" y2="16" />
+    <line x1="10" y1="20" x2="22" y2="20" />
+    <line x1="10" y1="24" x2="22" y2="24" />
+  </g>
+  
+  <!-- Spark/Innovation indicator -->
+  <g fill="white" opacity="0.8">
+    <circle cx="26" cy="6" r="1.5" />
+    <path d="M 26 4 L 26 8 M 24 6 L 28 6" stroke="white" stroke-width="1" stroke-linecap="round" fill="none"/>
+  </g>
+  
+  <defs>
+    <linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+  </defs>
+</svg>
