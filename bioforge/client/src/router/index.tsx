@@ -7,6 +7,7 @@ import { PATHS } from "./paths";
 import MainLayout from "@/layouts/MainLayout";
 import { AuthGuard, GuestGuard } from "./Guards";
 import LoginPage from "@pages/auth/LoginPage";
+import UsersPage from "@pages/admin/users/UsersPage";
 
 // --- PAGES (Code Splitting - Lazy Load) ---
 // Landing Page
@@ -34,6 +35,16 @@ export const router = createBrowserRouter([
       {
         element: <MainLayout />,
         children: [{ path: PATHS.design, element: <BioCADPage /> }],
+      },
+    ],
+  },
+  // 4. ADMIN ROUTES
+  {
+    element: <AuthGuard />,
+    children: [
+      {
+        element: <MainLayout />,
+        children: [{ path: "/admin/users", element: <UsersPage /> }],
       },
     ],
   },

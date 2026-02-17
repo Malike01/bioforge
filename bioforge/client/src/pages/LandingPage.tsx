@@ -21,7 +21,7 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-white selection:bg-indigo-100 selection:text-indigo-900">
       <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <div className="max-w-7xl h-16 flex items-center justify-between">
           <div className="flex items-center gap-2 font-bold text-xl tracking-tight text-slate-900">
             <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white">
               <Zap size={18} fill="currentColor" />
@@ -65,7 +65,7 @@ export default function LandingPage() {
 
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 mb-6 leading-[1.1]">
             {CONTENT.hero.TITLE_PREFIX} <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-cyan-500">
+            <span className="bg-clip-text bg-gradient-to-r from-indigo-600 to-cyan-500">
               {CONTENT.hero.TITLE_SUFFIX}
             </span>
           </h1>
@@ -74,7 +74,7 @@ export default function LandingPage() {
             {CONTENT.hero.DESCRIPTION}
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <Button
               size="lg"
               onClick={() => navigate(PATHS.design)}
@@ -160,8 +160,8 @@ export default function LandingPage() {
                   key={idx}
                   className="group p-8 rounded-2xl bg-slate-50 hover:bg-white border border-transparent hover:border-indigo-100 hover:shadow-xl hover:shadow-indigo-100/50 transition-all duration-300"
                 >
-                  <div className="w-12 h-12 bg-indigo-600/10 text-indigo-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <Icon size={24} />
+                  <div className="w-12 h-12 bg-indigo-600/10 text-indigo-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
+                    {Icon && <Icon size={24} />}
                   </div>
                   <h3 className="text-xl font-bold text-slate-900 mb-3">
                     {feature.title}

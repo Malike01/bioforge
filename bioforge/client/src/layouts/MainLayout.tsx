@@ -1,6 +1,8 @@
 import { Outlet } from "react-router-dom";
 import { Toaster } from "@/components/ui/sonner"; // Shadcn Sonner
 import { AppSidebar } from "./AppSidebar";
+import { SupportModal } from "@/components/support/SupportModal";
+import { SupportFab } from "@/components/support/SupportFab";
 
 export default function MainLayout() {
   return (
@@ -10,6 +12,8 @@ export default function MainLayout() {
         <Outlet />
       </main>
       <Toaster position="top-right" richColors closeButton />
+      <SupportFab />
+      <SupportModal />
     </div>
   );
 }
